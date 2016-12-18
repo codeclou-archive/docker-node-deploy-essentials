@@ -5,7 +5,7 @@ FROM ubuntu:16.04
 #
 RUN apt-get update && apt-get install -y sudo && rm -rf /var/lib/apt/lists/* && \
     sudo apt-get update && \
-    sudo apt-get -y install apt-utils wget curl bzip2 build-essential zlib1g-dev
+    sudo apt-get -y install apt-utils wget curl bzip2 build-essential zlib1g-dev git
 
 #
 # NODE
