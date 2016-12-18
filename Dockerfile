@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 #
 # PACKAGES
 #
-RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - \
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && \
     apt-get update && apt-get install -y sudo && rm -rf /var/lib/apt/lists/* && \
     sudo apt-get update && \
     sudo apt-get -y install nodejs wget bzip2 build-essential zlib1g-dev
