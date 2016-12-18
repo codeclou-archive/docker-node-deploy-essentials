@@ -16,6 +16,8 @@ RUN wget -O /opt/node-v7.2.1-linux-x64.tar.xz https://nodejs.org/dist/v7.2.1/nod
     export PATH=$PATH:/opt/node-v7.2.1-linux-x64/bin && \
     npm install -g node-deploy-essentials
 
+ENV PATH $PATH:/opt/node-v7.2.1-linux-x64/bin
+
 #
 # WORKDIR
 #
