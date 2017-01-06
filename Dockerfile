@@ -5,6 +5,7 @@ ENV NODDES_VERSION 0.0.18
 ENV PATH $PATH:/opt/node-v${NODEJS_VERSION}-linux-x64/bin
 
 RUN apk add --no-cache \
+            git \
             ca-certificates \
             nodejs && \
     mkdir -p /opt/npm/ && \
