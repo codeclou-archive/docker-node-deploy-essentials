@@ -1,6 +1,6 @@
 # docker-node-deploy-essentials
 
-[![](https://codeclou.github.io/doc/badges/generated/docker-image-size-52.svg)](https://hub.docker.com/r/codeclou/docker-node-deploy-essentials/tags/) [![](https://codeclou.github.io/doc/badges/generated/docker-from-alpine-3.5.svg)](https://alpinelinux.org/) [![](https://codeclou.github.io/doc/badges/generated/docker-run-as-non-root.svg)](https://docs.docker.com/engine/reference/builder/#/user)
+[![](https://codeclou.github.io/doc/badges/generated/docker-image-size-18.svg)](https://hub.docker.com/r/codeclou/docker-node-deploy-essentials/tags/) [![](https://codeclou.github.io/doc/badges/generated/docker-from-alpine-3.5.svg)](https://alpinelinux.org/) [![](https://codeclou.github.io/doc/badges/generated/docker-run-as-non-root.svg)](https://docs.docker.com/engine/reference/builder/#/user)
 
 Docker-Image to use [node-deploy-essentials](https://github.com/codeclou/node-deploy-essentials).
 
