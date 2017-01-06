@@ -13,13 +13,8 @@ Docker-Image to use [node-deploy-essentials](https://github.com/codeclou/node-de
  * Runs as non-root with fixed UID 10777 and GID 10777. See [howto prepare volume permissions](https://github.com/codeclou/doc/blob/master/docker/README.md).
  * See [howto use SystemD for named Docker-Containers and system startup](https://github.com/codeclou/doc/blob/master/docker/README.md).
 
------
 
 &nbsp;
-
-
-![](https://codeclou.github.io/doc/docker-warranty.svg?v5)
-
 
 -----
 
