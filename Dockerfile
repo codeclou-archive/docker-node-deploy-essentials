@@ -1,29 +1,22 @@
-FROM ubuntu:16.04
+FROM alpine:3.5
 
-#
-# PACKAGES
-#
-RUN apt-get update && apt-get install -y sudo && rm -rf /var/lib/apt/lists/* && \
-    sudo apt-get update && \
-    sudo apt-get -y install apt-utils wget curl bzip2 build-essential zlib1g-dev git
+ENV NODDES_VERSION 0.0.18
 
-#
-# NODE
-#
-RUN wget -O /opt/node-v7.2.1-linux-x64.tar.xz https://nodejs.org/dist/v7.2.1/node-v7.2.1-linux-x64.tar.xz && \
-    tar xfv /opt/node-v7.2.1-linux-x64.tar.xz -C /opt && \
-    export PATH=$PATH:/opt/node-v7.2.1-linux-x64/bin
-ENV PATH $PATH:/opt/node-v7.2.1-linux-x64/bin
+ENV PATH $PATH:/opt/node-v${NODEJS_VERSION}-linux-x64/bin
+
+RUN apk add --no-cache \
+            ca-certificates \
+            nodejs && \
+    mkdir -p /opt/npm/ && \
+    npm install -g node-deploy-essentials@${NODDES_VERSION} && \
+    addgroup -g 10777 nodeworker && \
+    adduser -D -G nodeworker -u 10777 nodeworker && \
+    chown -R nodeworker:nodeworker /opt/
 
 #
 # WORKDIR
 #
-RUN mkdir /opt/npm/
+USER nodeworker
+VOLUME ["/opt/npm/"]
 WORKDIR /opt/npm/
-
-#
-# NODE DEPLOY ESSENTIALS
-#
-RUN npm install -g node-deploy-essentials@0.0.17
-
-CMD ndes --version
+CMD ["ndes", "--version"]
