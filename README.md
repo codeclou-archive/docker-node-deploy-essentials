@@ -5,7 +5,6 @@
 Docker-Image to use [node-deploy-essentials](https://github.com/codeclou/node-deploy-essentials).
 
 -----
-
 &nbsp;
 
 ### Prerequisites
@@ -14,9 +13,8 @@ Docker-Image to use [node-deploy-essentials](https://github.com/codeclou/node-de
  * See [howto use SystemD for named Docker-Containers and system startup](https://github.com/codeclou/doc/blob/master/docker/README.md).
 
 
-&nbsp;
-
 -----
+&nbsp;
 
 ### Usage
 
