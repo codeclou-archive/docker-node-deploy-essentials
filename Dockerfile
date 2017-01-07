@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-ENV NODDES_VERSION 0.0.18
+ENV NODDES_VERSION 0.0.19
 
 ENV PATH $PATH:/opt/node-v${NODEJS_VERSION}-linux-x64/bin
 
