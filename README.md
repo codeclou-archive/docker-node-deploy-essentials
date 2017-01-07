@@ -24,7 +24,7 @@ You can use any command provided by [node-deploy-essentials](https://github.com/
 echo "bla bla ___TIMEST___ foo bar" > test.txt
 
 docker run \
-    -i -t \
+    -i -t -rm \
     -v $(pwd)/:/opt/npm \
     codeclou/docker-node-deploy-essentials:latest \
     ndes replace "___TIMEST___" byCurrentTimetamp in "test.txt"
