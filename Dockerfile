@@ -7,6 +7,7 @@ ENV PATH $PATH:/opt/node-v${NODEJS_VERSION}-linux-x64/bin
 COPY docker-entrypoint.sh /opt/docker-entrypoint.sh
 RUN apk add --no-cache \
             git \
+            build-base \
             bash \
             ca-certificates \
             nodejs && \
