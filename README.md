@@ -34,6 +34,19 @@ cat test.txt
 bla bla 2016-07-25T20:50:23.722Z foo bar
 ```
 
+You can also use this image to build something with npm like this:
+ 
+```
+docker run \
+    -i -t \
+    -v $(pwd)/:/opt/npm \
+    -e NPM_REGISTRY_MIRROR='http://nopar.foo.com/' \
+    codeclou/docker-node-deploy-essentials:latest \
+    npm install
+```
+
+Via the optional environment variable `NPM_REGISTRY_MIRROR` you can specify an npm repository mirror,
+which will be set internally as `npm config set registry http://nopar.foo.com/`
 
 -----
 &nbsp;
